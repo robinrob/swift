@@ -1,0 +1,3 @@
+[submodule "projects/calculator"]
+	path = projects/Calculator
+	url = git://github.com/robinrob/calculator.git
