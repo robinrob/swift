@@ -1,3 +1,6 @@
 [submodule "projects/calculator"]
-	path = projects/Calculator
-	url = git://github.com/robinrob/calculator.git
+  path = projects/Calculator
+  url = git://github.com/robinrob/calculator.git
+[submodule "projects/GuitarChords"]
+	path = projects/GuitarChords
+	url = git@github.com:robinrob/guitar-chords.git
