@@ -2,8 +2,8 @@
   path = projects/Calculator
   url = git://github.com/robinrob/calculator.git
 [submodule "projects/GuitarChords"]
-	path = projects/GuitarChords
-	url = git@github.com:robinrob/guitar-chords.git
+  path = projects/GuitarChords
+  url = git@github.com:robinrob/guitar-chords.git
 [submodule "projects/Playground"]
-	path = projects/Playground
-	url = git@github.com:robinrob/playground.git
+  path = projects/Playground
+  url = git@github.com:robinrob/playground.git
