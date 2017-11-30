@@ -9,12 +9,21 @@
 import Foundation
 
 class Exceptions {
-    static func tryCatch() {
+    static func tryCatchAnything() {
         do {
             try print(String(contentsOf: URL(string: "http://rsmith.io.blah")!))
         } catch {
-            print ("error")
-            print(error)
+            print("error: \(error)")
+        }
+    }
+    
+    static func tryCatchSpecificError() {
+        do {
+            try { throw MyError() }()
+        } catch let e as MyError {
+            print("My error: \(e)")
+        } catch let e as Error {
+            print("Other Error: \(e)")
         }
     }
     
@@ -30,6 +39,15 @@ class Exceptions {
         }
     }
     
+    static func tryCrash() {
+        try! print(heresAnError()) // Will crash the program if there's an error
+    }
+    
+    static func tryIgnore() {
+        try? print(heresAnError()) // Will crash the program if there's an error
+        print("Error was ignored!")
+    }
+    
     static func tryCatchWithPattern() {
 //        do {
 //            try print(heresAnError())
@@ -39,8 +57,17 @@ class Exceptions {
     }
     
     static func run() {
-        tryCatch()
+        tryCatchAnything()
+        print()
+        tryCatchSpecificError()
+        print()
         tryCatchOnThrown()
+        print()
+//        tryCrash()
+        print()
+        tryIgnore()
     }
+    
+    struct MyError: Error {}
 }
 

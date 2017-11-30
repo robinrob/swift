@@ -28,4 +28,8 @@ import Foundation
 //ExtensionTest.run()
 //Closures.run()
 //StrongWeakUnowned.run()
-SequenceTest.run()
+//SequenceTest.run()
+//AsTest.run()
+//Patterns.run()
+//Guards.run()
+
