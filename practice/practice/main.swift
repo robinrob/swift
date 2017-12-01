@@ -13,7 +13,7 @@ import Foundation
 //Optional.run()
 //Tuple.run()
 //Range.run()
-//StringTest.run()
+StringTest.run()
 //Enums.run()
 //Properties().run()
 //Observers.run()
@@ -32,4 +32,6 @@ import Foundation
 //AsTest.run()
 //Patterns.run()
 //Guards.run()
+//Private.run()
+//Characters.run()
 

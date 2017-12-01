@@ -53,13 +53,26 @@ public class StringTest {
         print("comps: \(comps)")
     }
     
+    static func slice() {
+        let parts = "Robin,Smith".split(separator: ",")
+        print("parts: \(parts)")
+        let typ = type(of: parts[0])
+        print("typ: \(typ)")
+    }
+    
     static func run() {
-//        café()
-//        subString()
-//        stringFromChar()
-//        loopOverChars("Robin")
+        café()
+        print()
+        subString()
+        print()
+        stringFromChar()
+        print()
+        loopOverChars("Robin")
+        print()
 //        contentsOf()
-//        splitAndComponents()
+        splitAndComponents()
+        print()
+        slice()
     }
 }
 
