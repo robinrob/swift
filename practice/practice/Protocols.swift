@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ProtocolTest {
+class Protocols {
     static func intersectionType() {
         var adult: Animal & Human = Adult("Robin")
         print(adult.name)
@@ -27,9 +27,24 @@ class ProtocolTest {
         print(Fork().name)
     }
     
+    static func protocolWithSelf() {
+        let myInt1 = MyInt(num: 24)
+        let myInt2 = MyInt(num: 6)
+        let myFloat1 = MyFloat(num: 24.0)
+        let myFloat2 = MyFloat(num: 6.0)
+        
+        let res1 = myInt1.greaterThan(other: myInt2)
+        let res2 = myFloat1.greaterThan(other: myFloat2)
+        print("res1: \(res1)")
+        print("res2: \(res2)")
+    }
+    
     static func run () {
         intersectionType()
+        print()
         optionalMonster()
+        print()
+        protocolWithSelf()
     }
 }
 
@@ -90,4 +105,39 @@ class Monster: Thing {}
 
 class Fork: Thing {
     let name = "fork"
+}
+
+protocol Protocol1 {
+    func methodToImplement() -> ()
+}
+
+protocol Protocol2 {
+    func methodToImplement() -> ()
+}
+
+class MyClass: Protocol1, Protocol2 {
+    func methodToImplement() {
+        print("implemented")
+    }
+}
+
+protocol ANumber {
+    // This means no downcasting required later!
+    func greaterThan(other: Self) -> Bool
+}
+
+struct MyInt: ANumber {
+    let num: Int
+    
+    func greaterThan(other: MyInt) -> Bool {
+        return num > other.num
+    }
+}
+
+struct MyFloat: ANumber {
+    let num: Float
+    
+    func greaterThan(other: MyFloat) -> Bool {
+        return num > other.num
+    }
 }

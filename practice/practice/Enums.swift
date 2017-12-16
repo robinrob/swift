@@ -29,13 +29,13 @@ class Enums {
             case cat
             case duck
         }
-        print(Animal.dog)
-        print(Animal.cat)
-        print(Animal.duck)
-        print(Animal.dog.hashValue)
-        print(Animal.dog.rawValue)
-        print(Animal.duck.hashValue)
-        print(Animal.duck.rawValue)
+        print("Animal.dog: \(Animal.dog)")
+        print("Animal.cat: \(Animal.cat)")
+        print("Animal.duck: \(Animal.duck)")
+        print("Animal.dog.hashValue: \(Animal.dog.hashValue)")
+        print("Animal.dog.rawValue: \(Animal.dog.rawValue)")
+        print("Animal.duck.hashValue: \(Animal.duck.hashValue)")
+        print("Animal.duck.rawValue: \(Animal.duck.rawValue)")
     }
     
     static func createWithAssociatedValues() {
@@ -65,10 +65,22 @@ class Enums {
         print()
     }
     
+    static func getByHashValue() {
+        enum Animal: Int {
+            case dog = 1
+            case cat = 2
+            case duck = 3
+        }
+        
+        let anim = Animal(rawValue: 1)
+        print("anim: \(anim.debugDescription)")
+    }
+    
     static func run() {
         runIt(create)
         runIt(createIntEnum)
         runIt(createWithAssociatedValues)
         runIt(assignUsingDotSyntax)
+        runIt(getByHashValue)
     }
 }
