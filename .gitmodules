@@ -6,4 +6,4 @@
   url = git@github.com:robinrob/playground.git
 [submodule "projects/GuitarChords"]
 	path = projects/GuitarChords
-	url = git@github.com:robinrob/guitar-chords
+	url = git@github.com:robinrob/guitar-chords.git
