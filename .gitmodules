@@ -6,4 +6,4 @@
   url = git@github.com:robinrob/playground.git
 [submodule "projects/GuitarChords"]
 	path = projects/GuitarChords
-	url = git@bitbucket.org:rsmithio/guitar-chords
+	url = git@bitbucket.org:rsmith-io/guitar-chords
