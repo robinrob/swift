@@ -7,3 +7,6 @@
 [submodule "projects/GuitarChords"]
 	path = projects/GuitarChords
 	url = git@bitbucket.org:rsmith-io/guitar-chords
+[submodule "projects/swift-4-model-coding"]
+	path = projects/swift-4-model-coding
+	url = git@github.com:robinrob/swift-4-model-coding
