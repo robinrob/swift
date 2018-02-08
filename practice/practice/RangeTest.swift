@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Range {
+public class RangeTest {
     
     static func create() {
         let range = 1...3

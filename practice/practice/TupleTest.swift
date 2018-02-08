@@ -9,7 +9,7 @@
 import Foundation
 
 
-public class Tuple {
+public class TupleTest {
     
     static func create() {
         let tup: (String, Int, Double) = ("Hello", 2, 8008.5)

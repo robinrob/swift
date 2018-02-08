@@ -36,4 +36,6 @@ import Foundation
 //Characters.run()
 //Zip.run()
 //Combinations.run()
-MockingWithProtocols.run()
+//MockingWithProtocols.run()
+CodableTest.run()
+
